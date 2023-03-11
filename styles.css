@@ -46,6 +46,11 @@ h3 {
   text-decoration: none;
 }
 
+.menu li:hover{
+    background-color: #5acc86;
+
+}
+
 /* Bio */
 
 .bio-container {
