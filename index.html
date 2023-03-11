@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <title>Sistemas Operativos</title>
+    <link rel="stylesheet" href="./styles.css">
+   <link rel="icon" href="./img/ic.png">
+  </head>
+  <body>
+
+    <!-- Header-->
+    <header>
+      <nav class="menu">
+        <ul>
+          <li><a href="./index.html">Inicio</a></li>
+          <li><a href="./us.html">Sobre Nosotros</a></li>
+        </ul>
+      </nav>
+    </header>
+    
+    <!-- Main section -->
+    <section class="bio-container">
+      <div class="bio-banner">
+        <div class="bio-details">
+          <h1>Sistemas Operativos</h1>
+          <p>Proyecto Unidad 2</p>
+        </div>
+        <figure>
+          <img class="bio-img" src="./img/icon.png">
+        </figure>
+      </div>
+    </section>
+
+    <!-- Portfolio -->
+    <div class="container-bg">
+      <section class="container" id="project">
+        <h2 class="container-title">Estados y transiciones de los procesos</h2>
+        <p class="project-description">Un proceso puede estar en cualquiera de los siguientes tres estados:
+                                       Listo, En ejecución y Bloqueado.</p>
+        <p class="project-description">Los procesos en el estado listo son los que pueden pasar a estado de ejecución 
+                                       si el planificador los selecciona. </p>      
+        <p class="project-description">Los procesos en el estado ejecución son los 
+                                       que se están ejecutando en el procesador en ese momento dado. </p> 
+        <p class="project-description">Los procesos que se encuentran en estado bloqueado están esperando
+                                      la respuesta de algún otro proceso para poder continuar con su ejecución.</p> 
+        <p class="project-description">Por ejemplo, operación de E/S.</p>
+        <p class="project-description">Un proceso puede variar entre 5 distintos estados </p>   
+        <p class="project-description">
+            <ul class="list">
+                <li>New: cuando el proceso está siendo creado. </li>
+                <li>Running: cuando el proceso se está ejecutando. </li>
+                <li>Waiting: cuando el proceso está esperando que se cumpla algún otro evento. </li>
+                <li>Ready: cuando el proceso esta pronto para ejecutar, esperando por la CPU. </li>
+                <li>Terminated: cuando el proceso está terminado. </li>
+            </ul>
+        </p>   
+        <div class="project">
+            <figure>
+              <img class="project-img" src="./img/1.png">
+            </figure>
+        </div>
+
+      <!-- segundo apartado -->
+    <div class="container-bg">
+            <section class="container" id="project">
+    <h2 class="container-title">Estado de los Procesos.</h2>
+        <p class="project-description">Los bloques de control de los procesos se almacenan en colas, cada una de las cuales representa un estado 
+                                             particular de los procesos, existiendo en cada bloque, entre otras informaciones. Los estados de los procesos
+                                             son internos del sistema operativo y transparentes al usuario.</p>
+        <p class="project-description">Los estados de los procesos se pueden dividir en dos tipos: activos e inactivos. </p>      
+
+        <p class="project-description">
+                  <ul class="square">
+                      <li>Estados activos </li>
+        <p class="project-description">Son aquellos que compiten con el procesador o están en condiciones de hacerlo. Se dividen en:</p></ul> 
+                   <ul class="list">
+                    <li>Ejecución: Estado en el que se encuentra un proceso cuando tiene el control del procesador.
+                         En un sistema monoprocesador este estado sólo lo puede tener un proceso.</li>
+                      <li>Preparado: Aquellos procesos que están dispuestos para ser ejecutados, pero no están en ejecución por alguna causa 
+                        (Interrupción, haber entrado en cola estando otro proceso en ejecución, etc.).</li>
+                      <li>Bloqueado: Son los procesos que no pueden ejecutarse de momento por necesitar algún recurso no disponible 
+                        (generalmente recursos de entrada/salida). </li>
+                      </ul>   
+               
+               <br></br>
+                      <ul class="square">
+                        <li>Estados inactivos</li>
+                      </ul> 
+        <p class="project-description">Son aquellos que no pueden competir por el procesador, pero que pueden volver a 
+                    hacerlo por medio de ciertas operaciones. En estos estados se mantiene el bloque de control de proceso aparcado
+                     hasta que vuelva a ser activado. Se trata de procesos que no han terminado su trabajo que lo han impedido y
+                     que pueden volver a activarse desde el punto en que se quedaron sin que tengan que volver a ejecutarse desde el principio.</p>
+                      <ul class="list">
+                       <li>Suspendido bloqueado: Es el proceso que fue suspendido en espera de un evento, sin que hayan desaparecido las causas de su bloqueo.</li>
+                       <li>Suspendido programado: Es el proceso que han sido suspendido, pero no tiene causa parta estar bloqueado.</li>
+                       </ul>
+              </p>   
+              <div class="project">
+                  <figure>
+                    <img class="project-img" src="./img/2.jpg">
+                  </figure>
+              </div>
+            
+ <!-- tercer apartado -->
+ <div class="container-bg">
+    <section class="container" id="project">
+      <h2 class="container-title"> Procesos ligeros: Hilos o hebras</h2>
+      <p class="project-description">El concepto de proceso engloba dos conceptos separados y potencialmente independientes:
+                                     uno relativo a la propiedad de recursos y otro que hace referencia a la ejecución.</p>
+      <p class="project-description">Unidad que posee recursos: A un proceso se le asigna un espacio de memoria y, de tanto 
+                                     en tanto, se le puede asignar otros recursos como dispositivos de E/S o ficheros. </p>      
+      <p class="project-description">Unidad a la que se le asigna el procesador: Un proceso es un flujo de ejecución (una traza) 
+                                     a través de uno o más programas. Esta ejecución se entremezcla con la de otros procesos. 
+                                     De tal forma, que un proceso tiene un estado (en ejecución, listo, etc) y una prioridad 
+                                     de expedición u origen. La unidad planificada y expedida por el sistema operativo es el proceso. </p> 
+      <p class="project-description">En la mayoría de los sistemas operativos, estas dos características son, de hecho, la esencia de un proceso.
+                                     Sin embargo, son independientes, y pueden ser tratadas como tales por el sistema operativo. Esta distinción 
+                                     ha conducido en los sistemas operativos actuales a desarrollar la construcción conocida como thread, cuyas 
+                                     traducciones más frecuentes son hilo, hebra y proceso ligero. Si se tiene esta división de características, 
+                                     la unidad de asignación de la CPU se conoce como hilo, mientras que a la unidad que posee recursos se le
+                                     llama proceso.</p>
+      <p class="project-description">Los beneficios clave de los hilos se derivan de las implicaciones del rendimiento: se tarda menos tiempo 
+                                     en crear un nuevo hilo de un proceso que ya existe, en terminarlo, y en hacer un cambio de contexto entre hilos de un mismo proceso.  </p>   
+      <p class="project-description">Al someter a un mismo proceso a varios flujos de ejecución se mantiene una única copia en memoria del código, y no varias. </p>   
+      <p class="project-description">Un ejemplo de aplicación que podría hacer uso de los hilos es un servidor de ficheros de una red de área local. Cada vez que
+                                     llega una solicitud de una operación sobre un fichero, se puede generar un nuevo hilo para su gestión. El servidor gestiona 
+                                     multitud de solicitudes, por tanto, se pueden crear y destruir muchos hilos en poco tiempo para dar servicio a estas peticiones. 
+                                     Si el servidor es un multiprocesador, se pueden ejecutar varios hilos de un mismo proceso simultáneamente y en diferentes procesadores.</p>
+    </div>
+
+  </body>
+</html>
